@@ -13,7 +13,7 @@ Règle d'or : **ce n'est pas toi qui « lis » le graphique, c'est le programme.
 bougies, tu lances `desk.py`, et tu rapportes ce qu'il dit. Tu n'inventes jamais un signal, un
 niveau ou un prix que le programme n'a pas sorti. Dans le doute : NO TRADE.
 
-La stratégie complète est dans `references/strategie.md` (lis-la si Nouri pose une question sur
+La stratégie complète est dans `references/strategie.md` du dépôt (lis-la si Nouri pose une question sur
 une règle). Elle est **en validation** : rappelle-le quand Nouri parle de performance.
 
 ## 0. Récupérer les scripts (une fois par session)
@@ -65,13 +65,13 @@ Ajoute `--json` si tu as besoin des détails. Code de sortie 0 = au moins un sig
 
 ## 4. Répondre à Nouri
 
-**S'il y a un SIGNAL** (A ou A+ uniquement), utilise ce format, heures en **Paris** :
+**S'il y a un SIGNAL** (A ou A+ uniquement), utilise ce format, heures en **Paris** (le programme les donne dans `heures_paris` et `valable_jusqu_paris`) :
 ```
 🟢/🔴 SIGNAL A+ : VENTE LIMITE 29 855,75 sur NQ
 Stop 29 894,25 (38,5 pts) | Objectif 29 727,75 (3,3R brut, 3,2R net)
 Taille : 2 MNQ (risque 158 $)
-Ordre valable jusqu'à 16h25 Paris. Annule-le si une bougie 5 min clôture au-dessus de 29 870.
-Pourquoi : chasse du plus haut de Londres à 16h00, CISD 16h05, FVG 16h15 ; biais journalier
+Ordre valable jusqu'à 17h15 Paris. Annule-le si une bougie 5 min clôture au-dessus de 29 868,25.
+Pourquoi : chasse du plus haut de Londres à 16h05, CISD 16h10, FVG 16h15 ; biais journalier
 baissier ; sous le VWAP ; au-dessus de la VAH de la veille.
 ```
 - Donne les prix exactement comme le programme, au tick près. N'arrondis pas.
